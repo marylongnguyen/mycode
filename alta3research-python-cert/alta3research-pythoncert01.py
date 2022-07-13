@@ -3,13 +3,13 @@ import csv
 import crayons
 
 def main():
-  dict_from_csv = {}
+    #dict_from_csv = {}
 
-  with open('animal_riddle.csv', mode='r') as riddle_file:
-    reader = csv.reader(riddle_file)
-    dict_from_csv = {rows[0]:rows[1] for rows in reader}
+    with open('animal_riddle.csv', newline='') as f:
+        reader = csv.reader(f)
+        for row in reader:
+            print(row)
 
-  print(dict_from_csv)
   # print crayons.red('red string')
   
 main()
