@@ -35,12 +35,14 @@ def main():
 #                         'Bat': 'I fly all night and sleep at dawn. When I do that I hang upside down. What am I? '}
 
 
-    num_riddles = len(riddles_from_csv)
+    num_riddles = str(len(riddles_from_csv))
     guess_count = 1
     riddles_correct = 0
     allowed_guesses = 3
 
-    while num_riddles != 0:
+    print("There are " + num_riddles + " riddles total. Do you think you can get them all correct? Let's get started!")
+
+    while len(riddles_from_csv) != 0:
       riddles = list(riddles_from_csv.values())
       answers = list(riddles_from_csv.keys())
       
@@ -68,8 +70,9 @@ def main():
               print("Nice! Yes, I'm a " + answers[riddle_answer_key] + " :)")
 
       riddles_from_csv.pop(answers[riddle_answer_key]) #remove riddles already answered during the same game session
-      num_riddles = len(riddles_from_csv) #update length of num_riddles
-      
+
+    print('YOU WIN!')
+
   # print crayons.red('red string')
 
 if __name__ == "__main__":
