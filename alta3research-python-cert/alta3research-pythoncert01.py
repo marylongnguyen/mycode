@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 """Alta3 Research Python Certification Project | Author: Mary Nguyen
-
    Description:
    A script that creates an Animal Riddle Game.
    See README.txt file for more details."""
@@ -12,7 +11,7 @@ import crayons
 
 
 def main():
-  
+
   begin = input('Are you ready (Y/N)? ')
     
   while begin.upper() not in ['Y', 'N']:
@@ -52,12 +51,12 @@ def main():
       riddle_answer_key = riddles.index(riddle) #list index of riddle to be used to return value from matching index in answer list
 
       while guess_count < 3 and guess.capitalize() != answers[riddle_answer_key]:
-        chances_remaining = str(allowed_guesses-guess_count)
+        chances_remaining = str(allowed_guesses-guess_count) 
         guess = input('Nope! Try again, you have '+ chances_remaining +' chances remaining. Who am I? ')    
         guess_count += 1
 
       if guess.capitalize() != answers[riddle_answer_key]: 
-        print('Sorry, better luck next time!')
+        print(crayons.red('Sorry! Better luck next time!'))
         break
 
       else:
@@ -71,9 +70,8 @@ def main():
 
       riddles_from_csv.pop(answers[riddle_answer_key]) #remove riddles already answered during the same game session
 
-    print('YOU WIN!')
-
-  # print crayons.red('red string')
+    if len(riddles_from_csv) == 0:
+      print(crayons.green('WOW! YOU WIN!'))
 
 if __name__ == "__main__":
     main()
