@@ -9,14 +9,10 @@ def main():
   
   begin = input('Are you ready (Y/N)? ')
     
-  if begin.upper() not in ['Y', 'N']:
-    while begin.upper() not in ['Y', 'N']:
-      print('Invalid entry, please choose Y/N. ')
-      begin = input('Are you ready(Y/N)? ')
-      if begin.upper() == 'N':
-        print('Boo! Goodbye!')
-
-  elif begin.upper() == 'N':
+  while begin.upper() not in ['Y', 'N']:
+    begin = input('Invalid entry, please choose Y/N. ')
+          
+  if begin.upper() == 'N':
     print('Boo! Goodbye!')
       
   else: 
