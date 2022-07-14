@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 
+"""Alta3 Research Python Certification Project | Author: Mary Nguyen
+
+   Description:
+   A script that creates an Animal Riddle Game.
+   See README.txt file for more details."""
+
 import csv
 import random
 import crayons
@@ -28,15 +34,16 @@ def main():
 #                         'Cow': 'I am a domestic animal living in the field. I like to eat grass and produce milk. What am I? ', 
 #                         'Bat': 'I fly all night and sleep at dawn. When I do that I hang upside down. What am I? '}
 
-    riddles = list(riddles_from_csv.values())
-    answers = list(riddles_from_csv.keys())
+
     num_riddles = len(riddles_from_csv)
     guess_count = 1
     riddles_correct = 0
     allowed_guesses = 3
 
     while num_riddles != 0:
-    
+      riddles = list(riddles_from_csv.values())
+      answers = list(riddles_from_csv.keys())
+      
       riddle = random.choice(riddles)
       guess = input(riddle)
 
@@ -61,8 +68,9 @@ def main():
               print("Nice! Yes, I'm a " + answers[riddle_answer_key] + " :)")
 
       riddles_from_csv.pop(answers[riddle_answer_key]) #remove riddles already answered during the same game session
-      num_riddles = len(riddles_from_csv)
-
+      num_riddles = len(riddles_from_csv) #update length of num_riddles
+      
   # print crayons.red('red string')
 
-main()
+if __name__ == "__main__":
+    main()
