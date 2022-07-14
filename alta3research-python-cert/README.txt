@@ -1,8 +1,7 @@
 # alta3research-python-cert
 Project for Python Certification from Alta3 Research
 
-One Paragraph of your project description goes here. Describe what you're trying to do.
-What is the purpose of putting up this repo?
+The program is an Animal Riddle Game. There are 5 specific riddles. When the user executes the program to start the game, the game will randomly display one of the five riddles. The user has 3 chances to guess the answer to the riddle. If the user answers incorrectly, the game will print the message "Wrong, try your luck again. You have # guesses remaining!". The word "Wrong" will be displayed in the color red and the "# guesses" will be displayed in the color orange. If the user answers correctly, the game will print the message "Nice! You've got it!" in the color green. 
 
 ## Getting Started
 
