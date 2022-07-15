@@ -1,0 +1,17 @@
+URL - https://regex101.com
+Test String - Contact: <sip:+17175664428@[2600:2304:9210:ec::2]:5060;eri-generated-at=10.172.0.132>Regular Expression - sip:\+(\d+)@\[(.*)\]:?(\d+)?
+
+For each of the () found in the regular express is treated as a group.
+The regular expression we're using has 3 groups.
+
+See sipparser01.py for python example.
+
+Output is:
+student@bchd:~/mycode/regex02$ python3 sipparser01.py
+sip:+18152430119@[2600:2204:4800:363::2]:5060
+The phone number is...
+18152430119
+The IPv6 is...
+2600:2204:4800:363::2
+The port is...
+5060
