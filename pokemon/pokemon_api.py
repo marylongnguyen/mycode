@@ -3,7 +3,7 @@
 import requests
 import pprint
 
-limit = '?limit=30'
+limit = '?limit=10'
 URL = 'https://pokeapi.co/api/v2/pokemon/'
 
 resp = requests.get(URL+limit)
