@@ -15,3 +15,6 @@ The IPv6 is...
 2600:2204:4800:363::2
 The port is...
 5060
+
+Other resources for massaging text sentences:
+https://www.nltk.org/api/nltk.tokenize.html
