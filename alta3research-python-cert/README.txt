@@ -3,7 +3,7 @@ Project for Python Certification from Alta3 Research
 
 The program is an Animal Riddle Game. 
 
-The player is first asked if they are ready to play. There is an infinite loop setup to check if the player's input is an expected value of either "Y" or "N". 
+The player is first asked if they are ready to play. There is a loop setup to check if the player's input is an expected value of either "Y" or "N". 
 * If the input does not meet the criteria of either "Y" or "N", then they will be continually prompted to enter a valid value. 
 * If the player's input meets the criteria of "N" then the message "BOO! Goodbye!" is displayed and the game ends
 * If the player's input meets the criteria of "Y" then they will proceed with the game. 
