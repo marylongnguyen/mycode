@@ -15,7 +15,7 @@ def main():
   begin = input('Are you ready to play (Y/N)? ') #the player is asked if they are ready to play the game
   
   #check if player's input is an expected value (Y/N) to proceed with the game
-  while begin.upper() not in ['Y', 'N']: #infinite loop until it meets the criteria of either Y/N
+  while begin.upper() not in ['Y', 'N']: #loop until it meets the criteria of either Y/N
     begin = input('Invalid entry, please choose Y/N. ') #the player is asked to try again and suggested to enter Y/N 
           
   #if player input is N then end the game
